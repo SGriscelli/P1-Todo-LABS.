@@ -15,15 +15,14 @@
     <header>
         <section class="topHeader">
             <h1><strong>TO-DO-LABS</strong></h1>
-            <input class="button" id="taskButton" type="button" value="➕"></button>
         </section>
 
         <section class="navHeader">
             <nav>
                 <ul>
-                    <a href="#"><strong>Pending Queue</strong> </a>
-                    <a href="#"><strong>All  my Tasks</strong> </a>
-                    <a href="#"><strong>Add a Task</strong></a>
+                    <a href="#listArea"><strong>My Lists</strong> </a>
+                    <a href="#taskArea"><strong>My Tasks</strong> </a>
+                    <a href="#"><strong>My Account</strong></a>
                 </ul>
             </nav>
         </section>
@@ -40,28 +39,55 @@
             </figure>
         </section>
         
-        <section class="searchArea">
-            <input type="button" id="sort" label="sort" name="searchBar" value="〒 sort">
-            <input type="search" id="searchBar" label="searchBar" name="searchBar" value="SEARCH">
+        <div class="addTask">
+            <input type="text" id="textTask">
+            <button id="addTask">+ Add a task!</button>
+        </div>
+        <div class="sort">
+            <select name="sort" class="sort">
+                <option value="all">by task</option>
+                <option value="done">by list</option>
+            </select>
+        </div>
+        <div class="sort">
+            <select name="sort" class="sort">
+                <option value="all">All</option>
+                <option value="done">Done</option>
+                <option value="todo">To-do</option>
+                <option value="all">Prioritaire</option>
+                <option value="done">Important</option>
+                <option value="todo">Faible</option>
+            </select>
+        </div>
+
+
+        <div class="addList">
+            <input type="text" id="textList">
+            <button id="addList">+ Add a list!</button>
+        </div>
+
+        <ul id="taskArea">
+                Mes tâches:
+        </ul>        
+        <ul id="listArea">
+            Mes listes:
+    </ul>        
+        <section class="contactUs">
+                <h2>Contact Us</h3>
+                <form>
+                    <input type="text" value="tapez votre texte">
+                    <input email="email" value="@">
+                    <input type="button" value="submit">
+                </form>
         </section>
-        <section class="listArea">
-            <article class="cardContainer"><h2>To-Do-List 1</h2>
-                <ul>
-                    <a>Deadline</a>
-                    <a>Category</a>
-                    <a>Priority</a>
-                    <a>Statut</a>
-                </ul>
-                <input type="button" id="checkButton" label="checkButton" name="checkButton" value="✅ Done!">
-            </article>
-        </section>
+
     </main>
 
     <footer>
-       <div class="menufooter"> <strong> Menu </strong> </div> 
-       <div class="TDLfooter"><strong> TO-DO-LABS <br> <center>WCS 2024</center></strong> </div>
-       <div class="contactusfooter"><strong> Contact Us</strong> </div>
+        <div class="menufooter"> <a href=#><strong> Menu </strong></a> </div> 
+        <div class="TDLfooter"><strong> <a href="https://www.wildcodeschool.com/fr-fr/" target="_blank">TO-DO-LABS <br> <center>WCS 2024</center></strong></a> </div>
+        <div class="contactusfooter"><strong> <a href="">Contact Us</a></strong> </div>
     </footer>
-
+    <script src="../acceuil/Script.js"></script>
 </body>
 </html>
