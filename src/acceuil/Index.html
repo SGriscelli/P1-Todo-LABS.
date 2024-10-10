@@ -31,20 +31,17 @@
 
     <main>
         <section class="indicatorBar">
-            <figure class="indicator" href="../task/task.html"> 5/10
+            <figure class="indicator">Réalisées: 1/50
             </figure> 
-            <figure class="indicator">3/10
+            <figure class="indicator">En-cours: 15/50
             </figure>
-            <figure class="indicator">16/35
+            <figure class="indicator">A faire: 24/50
             </figure>
         </section>
         
         <div class="addTask">
             <input type="text" id="textTask">
             <button id="addTask">+ Add a task!</button>
-        </div>
-        <div class="addList">
-            <input type="text" id="textList">
             <button id="addList">+ Add a list!</button>
         </div>
 
@@ -65,15 +62,70 @@
         </div>
 
         <ul id="taskArea">
-                Mes tâches:
+            Mes tâches:
+            <article class="taskContainer">
+                <h3>Tache 1</h3>
+                    <div class="informationsTask">
+                        <a>deadline:
+                            <input type ="date">
+                        </a>
+                        <a>statut:
+                            <select name="sort" class="sort">
+                                <option value="all">All</option>
+                                <option value="done">Done</option>
+                                <option value="todo">To-do</option>
+                            </select>
+                        </a>
+                        <a>categorie: 
+                            <select name="sort" class="sort">
+                                <option value="all">Prioritaire</option>
+                                <option value="done">Important</option>
+                                <option value="todo">Faible</option>
+                            </select>
+                        </a>
+                    </div>
+                    <div class="buttonSection">
+                        <a><button class="editButton">Edit</button></a>
+                        <a><button class="deleteButton">Delete</button></a>
+                        <a><button class="shareButton">Share</button></a>
+                    </div>
+            </article>
         </ul>        
         <ul id="listArea">
             Mes listes:
+
+            <article class="taskContainer">
+                <h3>Liste 1</h3>
+                    <div class="informationsTask">
+                        <a>deadline:
+                            <input type ="date">
+                        </a>
+                        <a>statut:
+                            <select name="sort" class="sort">
+                                <option value="all">All</option>
+                                <option value="done">Done</option>
+                                <option value="todo">To-do</option>
+                            </select>
+                        </a>
+                        <a>categorie: 
+                            <select name="sort" class="sort">
+                                <option value="all">Prioritaire</option>
+                                <option value="done">Important</option>
+                                <option value="todo">Faible</option>
+                            </select>
+                        </a>
+                    </div>
+                    <div class="buttonSection">
+                        <a><button class="editButton">Edit</button></a>
+                        <a><button class="deleteButton">Delete</button></a>
+                        <a><button class="shareButton">Share</button></a>
+                    </div>
+            </article>
     </ul>        
         <section class="contactUsArea">
                 <h2>Contact Us</h2>
                 <form>
-                    <input type="text" value="tapez votre texte">
+                    <input type="text" value="texte à saisir">
                     <input email="email" value="@">
                     <input type="button" value="submit">
                 </form>

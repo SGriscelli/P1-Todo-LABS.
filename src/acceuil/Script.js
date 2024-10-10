@@ -2,7 +2,7 @@ const taskData = [];
 const listLibrary = [];
 
 const task = {
-  title :null,
+  title : null,
   statut: null,
   categorie: null,
   deadline: null,
@@ -27,10 +27,15 @@ const ulTask = document.querySelector(`#taskArea`);
 buttonTask.addEventListener('click', () => {
     const text = document.querySelector('#textTask').value;
     const li = document.createElement('li');
-    task
+    taskData.push(text);
+    console.log(taskData);
     li.innerHTML = text;
     ulTask.append(li);
 })
+
+
+
+
 
 
 // J'écoute le buttonTask pour créer une tache dans ma taskArea//
