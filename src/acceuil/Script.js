@@ -19,14 +19,22 @@ buttonList.addEventListener('click', () => {
     ulList.append(li);
 })
 
-const contactArea = document.querySelector(`.contactUs`);
-const contactButton = document.querySelector(`.contactusfooter`);
+const taskTemplate = {
+  title :null,
+  statut: null,
+  categorie: null,
+  deadline: null,
+}
 
-contactButton.addEventListener('click', () => {
-    
-    if (contactArea.style.display === 'none') {
-        contactArea.style.display = 'block';
-      } else {
-        contactArea.style.display = 'none';
-      }
-    })
+const listTemplate = {
+  title :null,
+  statut: null,
+  categorie: null,
+  deadline: null,
+}
+
+const qualifications = {
+  statut: ['null','done','to-do'],
+  categorie: ['priority','low','high'],
+  deadline: null,
+}
