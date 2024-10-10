@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
+    outline: ; /*1px solid red*/
 }
 
 :root {
@@ -18,13 +18,15 @@ header {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: var(--primary-color);
-
 }
 
-.addTask {
+.addTask .addList {
     display: flex;
-    justify-content: space-between;
-    gap:1rem;
+    justify-content: space-around;
+}
+.sort {
+    display: flex;
+    justify-content: space-around;
 }
 
 header .topHeader {
@@ -48,7 +50,6 @@ header .topHeader .button {
 
 }
 
-
 h1 {
     color: var(--primary-text-color);
     font-size: x-large;
@@ -58,6 +59,10 @@ nav {
 
     color: whitesmoke;
     margin-bottom: 1px;
+}
+
+h2 {
+    font-size: 1rem;
 }
 
 #taskBar {
@@ -90,28 +95,30 @@ header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    list-style: none;
-
 }
 a {
     text-decoration: none;
     color: var(---primary-text-color);
-
+}
+#taskArea {
+    height: 5rem;
+    margin: 5px;
+    border: 1px solid var(--primary-color);
 }
 
-.listArea {
-    height: 25rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+#listArea {
+    height: 5rem;
+    margin: 5px;
+    border: 1px solid var(--primary-color);
 }
 
-.searchArea {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.contactUsArea{
+    height: 5rem;
+    margin: 5px;
+    border: 1px solid var(--primary-color);
+    display: none;
 }
+
 
 #sort {
     height: 3rem;
@@ -130,9 +137,6 @@ a {
     padding-right: 3rem;
     background-color: #e6eefa ;
     border-radius: 0.4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 
