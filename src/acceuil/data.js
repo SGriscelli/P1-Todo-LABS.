@@ -1,7 +1,7 @@
 // CREATION DES TABLEAUX DE DONNEES //
 
-const taskData = []; // tableau contenant l'ensemble des tâches //
-const listLibrary = []; // tableau contenant l'ensemble des listes //
+// const taskData = []; // tableau contenant l'ensemble des tâches //
+// const listData = []; // tableau contenant l'ensemble des listes //
 
 const task = { // object TACHES vide //
   title : null,
