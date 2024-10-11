@@ -1,67 +1,67 @@
 
-// =======================> ECOUTE DES BOUTONS ET STOCKAGE DES DONNEES
+// ================ ECOUTE DU FORMULAIRE:
 
-// Etape 1: J'écoute le buttonTask pour créer une tache dans ma taskArea//
-const buttonTask = document.querySelector(`#addTask`);
-const ulTask = document.querySelector(`#taskArea`);
+// Etape 1: Je déclare les fonctions des élements que je veux écouter:
 
-// Etape 2: Je crée les variables stockant les nouvelles taches;
-const taskData = [];
+let form = document.getElementById('taskForm');
+let textInput = document.getElementById('textInput');
+let deadlineInput = document.getElementById(`deadlineInput`);
+let priorityInput = document.getElementById(`priorityInput`);
+let statutInput = document.getElementById(`statutInput`);
+let taskListInput = document.getElementById(`taskOrListInput`);
+let taskContainer = document.getElementById(`cardContainer`);
 
-// buttonTask.addEventListener('click', () => {
-//     const text = document.querySelector('#textInput').value;
-//     const li = document.createElement('li');
-//     taskData.push(text);
-//     console.log(taskData);
-//     li.innerHTML = text;
-//     ulTask.append(li);
-// })
+// Etape 2: J'écoute les élements:
 
-// Etape 3: J'écoute le buttonList pour créer une tache dans ma listArea//
-const buttonList = document.querySelector(`#addList`);
-const ulList = document.querySelector(`#listArea`);
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-// Etape 4: Je crée les variables stockant les nouvelles listes;
-const listData = [];
+  // je récupérer les valeurs des champes du formulaire:
+    const name =  textInput.value;
+    const deadline = deadlineInput.value;
+    const priority = priorityInput.value;
+    const statut = statutInput.value;
+    const taskOrList = taskListInput.value;
 
-buttonList.addEventListener('click', () => {
-    const text = document.querySelector('#textInput').value;
-    const li = document.createElement('li');
-    listData.push(text);
-    console.log(listData); // J'envoie mes données dans le tableau listData
-    li.innerHTML = text;
-    ulList.append(li);
+  // je crée mon element à insérer lorsque je crée une tâche:
+    const taskElement = document.createElement('div');
+    taskElement.classList.add('task');
+
+    taskElement.innerHTML = `
+    <div class="cardContainer">
+      <h3>${name}</h3>
+      <div>
+      <p>Catégorie: ${priority}</p>
+      <p>Deadline: ${deadline}</p>
+      </div>
+      <p>Statut: ${statut}</p>
+      <p>Catégorie: ${taskOrList}</p>
+    </div>
+    `;
+  
+    // j'insère mon élément dans le conteneur:
+  taskContainer.appendChild(taskElement);
+
+    // je reset le formulaire:
+  form.reset();
+
 });
 
-// =======================> CREATION DE LA FUNCTION : CREATION D'OBJETS AVEC PLUSIEURS VARIABLES
+// // =======================> CREATION DE LA FUNCTION : CREATION D'OBJETS AVEC PLUSIEURS VARIABLES
 
-// Etape 1: Définir son besoin: je veux que pour chaque nouvelle entrée de tache, un object se crée:
-buttonTask.addEventListener('click', () => {
-  const text = document.querySelector('#textInput').value;
-  const li = document.createElement('li');
-  taskData.push(text);
-  console.log(taskData);
-  li.innerHTML = text;
-  ulTask.append(li);
-})
-
-
+// // Etape 1: Définir son besoin: je veux que pour chaque nouvelle entrée de tache, un object se crée:
+// buttonTask.addEventListener('click', () => {
+//   const text = document.querySelector('#textInput').value;
+//   const li = document.createElement('li');
+//   taskData.push(text);
+//   console.log(taskData);
+//   li.innerHTML = text;
+//   ulTask.append(li);
+// })
 
 
-// =======================> INTEGRATION DE LA FONCTION CONTAINERS DE TACHES AU CLIC//
 
-// Etape 1: importer la function création d'une carte
-// import createCard from "./cardCreator.js"
-
-// Etape 2: Je récupère le noeud dans mon DOM
-// const cards = document.querySelector('.cards');
-
-// Etape 3: J'intègre la nouvelle carte dans mon DOM
-// cards.innerHTML = createCard();
-// console.log("test" , cards);
-
-
-// =======================> AFFICHER / CACHER LA SACTION CONTACT US
+// =======================> AFFICHER / CACHER LA SECTION CONTACT US
 
 // Etape 1: J'affiche ma section Contact Us en cliquant sur le bouton Contact Us//
 const contactUsButton = document.querySelector(`#contactUsButton`);

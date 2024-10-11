@@ -1,6 +1,6 @@
 function createCard() {
 
-const newCard = `<artcilce class=".cards">
+const newCard = `<article class=".cards">
 <h3>Tache 1</h3>
     <div class="informationsTask">
         <a>deadline:
