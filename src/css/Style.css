@@ -28,9 +28,19 @@ header {
     background-color: var(--primary-color);
 }
 
+.addTask {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 .addTask .addList {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.textTask {
+    width: 5rem;
 }
 
 .sort {
@@ -116,6 +126,7 @@ a {
     height: auto;
     margin: 5px;
     border: 1px solid var(--primary-color);
+    border-radius: 5px;;
 }
 
 .contactUsArea {

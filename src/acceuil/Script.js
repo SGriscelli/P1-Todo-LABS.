@@ -1,60 +1,24 @@
-const taskData = [];
-const listLibrary = [];
-
-const task = {
-  title : null,
-  statut: null,
-  categorie: null,
-  deadline: null,
-}
-
-const list = {
-  title :null,
-  statut: null,
-  categorie: null,
-  deadline: null,
-}
-
-const qualifications = {
-  statut: ['null','done','to-do'],
-  categorie: ['priority','low','high'],
-  deadline: null,
-}
-
+// J'écoute le buttonTask pour créer une tache dans ma taskArea//
 const buttonTask = document.querySelector(`#addTask`);
 const ulTask = document.querySelector(`#taskArea`);
 
+//Ajout de la tache au tableau data.js
+const taskLibrary = [];
+
 buttonTask.addEventListener('click', () => {
-    const text = document.querySelector('#textTask').value;
+    const text = document.querySelector('#addText').value;
     const li = document.createElement('li');
-    taskData.push(text);
-    console.log(taskData);
     li.innerHTML = text;
+    const inLibrary = document.querySelector()
     ulTask.append(li);
 })
-
-
-
-
-
-
-// J'écoute le buttonTask pour créer une tache dans ma taskArea//
-// const buttonTask = document.querySelector(`#addTask`);
-// const ulTask = document.querySelector(`#taskArea`);
-
-// buttonTask.addEventListener('click', () => {
-//     const text = document.querySelector('#textTask').value;
-//     const li = document.createElement('li');
-//     li.innerHTML = text;
-//     ulTask.append(li);
-// })
 
 // J'écoute le buttonList pour créer une tache dans ma listArea//
 const buttonList = document.querySelector(`#addList`);
 const ulList = document.querySelector(`#listArea`);
 
 buttonList.addEventListener('click', () => {
-    const text = document.querySelector('#textList').value;
+    const text = document.querySelector('#addText').value;
     const li = document.createElement('li');
     li.innerHTML = text;
     ulList.append(li);
