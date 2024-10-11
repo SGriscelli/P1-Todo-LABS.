@@ -39,11 +39,27 @@
             </figure>
         </section>
         
-        <div class="addText">
-            <input type="text" id="addText">
-            <button id="addTask">+ Add a task!</button>
-            <button id="addList">+ Add a list!</button>
-        </div>
+        <form id="taskForm">
+            <input type="text" id="textInput" placeholder="votre nouvelle tâche">
+            <div class="mainInfo">
+            <input type="date" id="deadlineInput">
+            <select id="priorityInput">
+                <option value="aucune">Aucune</option>
+                <option value="faible">Faible</option>
+                <option value="haute">Haute</option>
+            </select>
+            <select id="statutInput">
+                <option value="à faire">A faire</option>
+                <option value="en-cours">En-cours</option>
+                <option value="fait">Fait</option>
+            </select>
+            <select id="taskOrListInput">
+                <option value="tache">Tâche</option>
+                <option value="list">Liste</option>
+            </select>
+            </div>
+            <button type="submit" id="submit"> Ajouter</button>
+        </form>
 
         <div class="sort"><h2>Trier par:</h2>
             <select name="sort" class="sort">
@@ -63,72 +79,13 @@
 
         <ul id="taskArea">
             Mes tâches:
-            <article class="taskContainer">
-                <h3>Tache 1</h3>
-                    <div class="informationsTask">
-                        <a>deadline: <br><input type ="date">
-                        </a>
-                        <a>statut:
-                            <select name="sort" class="sort">
-                                <option value="all">All</option>
-                                <option value="done">Done</option>
-                                <option value="todo">To-do</option>
-                            </select>
-                        </a>
-                        <a>categorie: 
-                            <select name="sort" class="sort">
-                                <option value="all">Prioritaire</option>
-                                <option value="done">Important</option>
-                                <option value="todo">Faible</option>
-                            </select>
-                        </a>
-                    </div>
-                    <div class="buttonSection">
-                        <a><button class="editButton">Edit ✎</button></a>
-                        <a><button class="deleteButton">Delete ☒</button></a>
-                        <a><button class="shareButton">Share ✉︎</button></a>
-                        <a><button class="doneButton">Fait! ☑︎</button></a>
-                    </div>
-                    <li>
-                    </li>
-            </article>
+           <div id="cardContainer">
+           </div>
         </ul>        
         <ul id="listArea">
             Mes listes:
 
-            <article class="taskContainer">
-                <h3>Liste 1</h3>
-
-                    <div class="informationsTask">
-                        <a>deadline: <br><input type ="date">
-                        </a>
-                        <a>statut:
-                            <select name="sort" class="sort">
-                                <option value="all">All</option>
-                                <option value="done">Done</option>
-                                <option value="todo">To-do</option>
-                            </select>
-                        </a>
-                        <a>categorie: 
-                            <select name="sort" class="sort">
-                                <option value="all">Prioritaire</option>
-                                <option value="done">Important</option>
-                                <option value="todo">Faible</option>
-                            </select>
-                        </a>
-                    </div>
-                    <div class="buttonSection">
-                        <a><button class="editButton">Edit ✎</button></a>
-                        <a><button class="deleteButton">Delete ☒</button></a>
-                        <a><button class="shareButton">Share ✉︎</button></a>
-                            <label class="switch">
-                                <input type="checkbox" id="completedSwitch">
-                                <span class="sliderRound"></span>
-                            </label>                    </div>
-                    <li>
-                    </li>
-            </article>
-    </ul>        
+        </ul>        
         <section class="contactUsArea">
                 <h2>Contact Us</h2>
                 <form>

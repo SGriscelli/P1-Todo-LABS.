@@ -1,6 +1,10 @@
 function createCard() {
 
+<<<<<<< HEAD
 const newCard = `<artcilce class=".cards">
+=======
+const newCard = `<article class=".cards">
+>>>>>>> cardCreatorFunction
 <h3>Tache 1</h3>
     <div class="informationsTask">
         <a>deadline:

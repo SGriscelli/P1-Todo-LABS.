@@ -110,6 +110,7 @@ h2 {
     color: var(--secondary-color);
 }
 
+
 .indicatorBar {
     display: flex;
     flex-direction: row;
@@ -159,8 +160,6 @@ a {
     border-radius: 8.5px;
     background-color: var(--third-color);
     font-size: 100%;
-
-}
 
 #sort {
     height: 3rem;
@@ -242,10 +241,23 @@ a {
     gap: 1rem;
 }
 
-main {
-    flex-grow: 1;
+.cardContainer {
+    height: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #e6eefa ;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
 }
 
+.mainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 footer {
     background-color: var(--primary-color);
