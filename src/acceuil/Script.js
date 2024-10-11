@@ -2,14 +2,11 @@
 const buttonTask = document.querySelector(`#addTask`);
 const ulTask = document.querySelector(`#taskArea`);
 
-//Ajout de la tache au tableau data.js
-const taskLibrary = [];
 
 buttonTask.addEventListener('click', () => {
     const text = document.querySelector('#addText').value;
     const li = document.createElement('li');
     li.innerHTML = text;
-    const inLibrary = document.querySelector()
     ulTask.append(li);
 })
 
