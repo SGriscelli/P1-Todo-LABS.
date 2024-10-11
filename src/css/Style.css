@@ -9,9 +9,29 @@
     --third-color: #ebf3fd;
     --primary-text-color: whitesmoke;
     --secondary-text-color: black;
-    --primary-font: ;
+    --primary-font: ../ ;
     --secondary-font: ;
 }
+
+@font-face {
+    font-family: "Exo2";
+    src: url("../acceuil/public/fonts/Exo2-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Assistant";
+    src: url("../acceuil/public/fonts/Assistant-VariableFont_wght.ttf");
+}
+
+h1, .TDLfooter, .menufooter, nav{
+    font-family: "Exo2";
+}
+
+main, #contactUsButton{
+    font-family: "Assistant"; 
+}
+
+
 
 html, body {
     height: 100%;
@@ -61,7 +81,7 @@ header .topHeader .button {
 h1 {
     color: var(--primary-text-color);
     font-size: x-large;
-    font-family: var(--primary-font);
+
 }
 
 nav {
@@ -171,6 +191,7 @@ a {
 main {
     flex-grow: 1;
 }
+
 
 footer {
     background-color: var(--primary-color);
