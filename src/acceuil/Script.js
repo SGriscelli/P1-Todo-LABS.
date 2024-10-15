@@ -26,7 +26,6 @@ form.addEventListener('submit', function(event) {
 
   // je crée mon element à insérer lorsque je crée une tâche:
     const taskElement = document.createElement('div');
-    taskData.push(text);
     taskElement.classList.add('task');
     taskElement.innerHTML = `
     <div class="cardContainer">
@@ -47,13 +46,6 @@ form.addEventListener('submit', function(event) {
   form.reset();
 
 });
-
-// // =======================> CREATION DE LA FUNCTION : CREATION D'OBJETS AVEC PLUSIEURS VARIABLES
-
-// // Etape 1: Définir son besoin: je veux que pour chaque nouvelle entrée de tache, un object se crée:
-
-
-
 
 // =======================> AFFICHER / CACHER LA SECTION CONTACT US
 
