@@ -21,7 +21,7 @@ const addTask = function(event) {
     form.addEventListener('submit', function(event) {
 
     
-};
+});
 
 
 form.addEventListener('submit', function(event) {
@@ -42,11 +42,11 @@ form.addEventListener('submit', function(event) {
     <div class="cardContainer">
       <h3>${name}</h3>
     <div>
-      <p>Catégorie: ${priority}</p>
-      <p>Deadline: ${deadline}</p>
+      <p>Catégorie = ${priority}</p>
+      <p>Deadline = ${deadline}</p>
     </div>
-      <p>Statut: ${statut}</p>
-      <p>Catégorie: ${taskOrList}</p>
+      <p>Statut = ${statut}</p>
+      <p>Catégorie = ${taskOrList}</p>
     </div>
     `;
 

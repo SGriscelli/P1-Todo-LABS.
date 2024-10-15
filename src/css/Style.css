@@ -272,18 +272,22 @@ footer {
     
 }
 @media only screen and (min-width: 769px) {
+    body{
+        margin: 0% 7% 0% 7%;
+    }
      #cardContainer {
          display: grid;
          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-         gap: 3px;
-         margin: 0% 10% 0% 10%;
+         gap: 2px;
+         margin: 0% 5% 0% 5%;
+         font-family: "Exo2";
+         font-size:larger;
 
 }
     #taskArea, #listArea {
          height: auto;
          margin: 5px;
-         border: 1px solid var(--primary-color);
          border-radius: 5px;;
-          margin: 0% 32% 0% 32%;
+        margin: 0% 1% 0% 1%;
 } 
 }
