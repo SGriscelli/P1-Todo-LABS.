@@ -9,8 +9,6 @@
     --third-color: #ebf3fd;
     --primary-text-color: whitesmoke;
     --secondary-text-color: black;
-    --primary-font: ../ ;
-    --secondary-font: ;
 }
 
 @font-face {
@@ -30,8 +28,6 @@ h1, .TDLfooter, .menufooter, nav{
 main, #contactUsButton{
     font-family: "Assistant"; 
 }
-
-
 
 html, body {
     height: 100%;
