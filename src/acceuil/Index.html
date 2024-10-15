@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>To-Do LABS - Improve your work & your life </title>
     <link rel="stylesheet" href="../css/Style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     
 </head>
 <body>
@@ -30,20 +30,17 @@
     </header>
 
     <main>
-        <section class="indicatorBar">
-            <figure class="indicator">Réalisées: 1/50
-            </figure> 
-            <figure class="indicator">En-cours: 15/50
-            </figure>
-            <figure class="indicator">A faire: 24/50
-            </figure>
+        <section class="indicatorBar"> 
+            <figure class="indicator">Réalisées: <span class="circle"><span class="green"><strong>1/ 50</strong></span></span></figure> 
+            <figure class="indicator">En-cours: <span class="circle1"><span class="orange"><strong>15/ 50</strong></span></span></figure>
+            <figure class="indicator">À faire: <span class="circle2"><span class="black"><strong>25/ 50</strong></span></span></figure>
+        
         </section>
         
         <div class="addTask">
-            <input type="text" id="textTask">
+            <input type="text" id="textTask"> 
             <button id="addTask">+ Add a task!</button>
-            <button id="addList">+ Add a list!</button>
-        </div>
+            <button id="addList">+ Add a list!</button> <div></div>
 
         <div class="sort"><h2>Trier par:</h2>
             <select name="sort" class="sort">

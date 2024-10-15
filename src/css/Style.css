@@ -1,202 +1,253 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-    --primary-color: #a6c9f8;
-    --secondary-color: #c7ddfa;
-    --third-color: #ebf3fd;
-    --primary-text-color: whitesmoke;
-    --secondary-text-color: black;
+	--primary-color: #a6c9f8;
+	--secondary-color: #c7ddfa;
+	--third-color: #ebf3fd;
+	--primary-text-color: whitesmoke;
+	--secondary-text-color: black;
 }
 
 @font-face {
-    font-family: "Exo2";
-    src: url("../acceuil/public/fonts/Exo2-VariableFont_wght.ttf");
+	font-family: "Exo2";
+	src: url("../acceuil/public/fonts/Exo2-VariableFont_wght.ttf");
 }
 
 @font-face {
-    font-family: "Assistant";
-    src: url("../acceuil/public/fonts/Assistant-VariableFont_wght.ttf");
+	font-family: "Assistant";
+	src: url("../acceuil/public/fonts/Assistant-VariableFont_wght.ttf");
 }
 
-h1, .TDLfooter, .menufooter, nav{
-    font-family: "Exo2";
+h1,
+.TDLfooter,
+.menufooter,
+nav {
+	font-family: "Exo2";
 }
 
-main, #contactUsButton{
-    font-family: "Assistant"; 
+main,
+#contactUsButton {
+	font-family: "Assistant";
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 header {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: var(--primary-color);
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: var(--primary-color);
 }
 
 .addTask .addList {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .sort {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 header .topHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
 }
 
 header .topHeader h1 {
-    flex-grow: 1;
-    text-align: center;
+	flex-grow: 1;
+	text-align: center;
 }
 
 header .topHeader .button {
-    margin-right: 0.4rem;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    font-size: 150%;
+	margin-right: 0.4rem;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	font-size: 150%;
 }
 
 h1 {
-    color: var(--primary-text-color);
-    font-size: x-large;
-
+	color: var(--primary-text-color);
+	font-size: x-large;
 }
 
 nav {
-    color: whitesmoke;
-    margin-bottom: 1px;
+	color: whitesmoke;
+	margin-bottom: 1px;
 }
 
 h2 {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 #taskBar {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 30px;
-    color: var(--secondary-color);
+	height: 2rem;
+	width: 2rem;
+	border-radius: 30px;
+	color: var(--secondary-color);
 }
 
 .indicatorBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    gap: 3px;
-    height: 2rem;
-    background-color: var(--secondary-color);
-    border-radius: 15px;
-    margin-left: 0.45rem;
-    margin-right: 0.45rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	gap: 3px;
+	height: 2rem;
+	background-color: var(--secondary-color);
+	border-radius: 15px;
+	margin-left: 0.45rem;
+	margin-right: 0.45rem;
 }
 
 .indicator {
-    display: flex;
-    font-size: 1rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
+	display: flex;
+	font-size: 1rem;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+}
+
+.circle {
+	display: inline-block;
+	width: 1.9em;
+	height: 1.9em;
+	border-radius: 1em;
+	background-color: rgba(0, 128, 0, 0.582);
+	color: white;
+	text-align: center;
+	line-height: 1.8em;
+	border: 2px solid green;
+}
+.circle1 {
+	display: inline-block;
+	width: 1.9em;
+	height: 1.9em;
+	border-radius: 1em;
+	background-color: rgba(255, 166, 0, 0.603);
+	color: white;
+	text-align: center;
+	line-height: 1.8em;
+	border: 2px solid orange;
+}
+.circle2 {
+	display: inline-block;
+	width: 1.9em;
+	height: 1.9em;
+	border-radius: 1em;
+	background-color: rgba(0, 0, 0, 0.623);
+	color: white;
+	text-align: center;
+	line-height: 1.8em;
+	border: 2px solid black;
+}
+
+.green {
+	font-size: 0.7em;
+}
+.orange {
+	font-size: 0.7em;
+}
+.black {
+	font-size: 0.7em;
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-text-color);
+	text-decoration: none;
+	color: var(--primary-text-color);
 }
 
-#taskArea, #listArea {
-    height: auto;
-    margin: 5px;
-    border: 1px solid var(--primary-color);
+#taskArea,
+#listArea {
+	height: auto;
+	margin: 5px;
+	border: 1px solid var(--primary-color);
 }
 
 .contactUsArea {
-    height: 5rem;
-    margin: 5px;
-    border: 1px solid var(--primary-color);
-    display: none;
+	height: 5rem;
+	margin: 5px;
+	border: 1px solid var(--primary-color);
+	display: none;
 }
-#contactUsButton{
-    border-radius: 8.5px;
-    background-color: var(--third-color);
-    font-size: 100%;
-
+#contactUsButton {
+	border-radius: 8.5px;
+	background-color: var(--third-color);
+	font-size: 100%;
 }
 
 #sort {
-    height: 3rem;
-    width: 5rem;
-    border-radius: 8px;
+	height: 3rem;
+	width: 5rem;
+	border-radius: 8px;
 }
 
 #searchBar {
-    height: 3rem;
-    width: 30rem;
+	height: 3rem;
+	width: 30rem;
 }
 
 .taskContainer {
-    height: auto;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    background-color: #e6eefa;
-    border-radius: 0.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2px;
+	height: auto;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	background-color: #e6eefa;
+	border-radius: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2px;
 }
-
 
 .informationsTask {
-    display: flex;
-    gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 .informationsTask a {
-    color: black;
+	color: black;
 }
 
 .buttonSection {
-    display: flex;
-    gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 
 main {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
-
 footer {
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--primary-text-color);
-    border-radius: 15px 15px 0 0;
-    height: 20px;
-    margin-top: auto;
-    padding: 10px 0; 
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--primary-text-color);
+	border-radius: 15px 15px 0 0;
+	height: 20px;
+	margin-top: auto;
+	padding: 10px 0;
+}
+@media only screen and (min-width: 766px) {
+	.indicatorBar {
+		display: flex;
+	}
 }
