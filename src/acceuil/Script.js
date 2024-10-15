@@ -1,4 +1,5 @@
-
+// j'importe ma fonction de création de tahces/listes
+//import cardCreator from "./cardCreator";
 // ================ ECOUTE DU FORMULAIRE:
 
 // Etape 1: Je déclare les fonctions des élements que je veux écouter:
@@ -63,3 +64,18 @@ contactUsButton.addEventListener('click', (event) => {
    contactUsArea.style.display = "block";
  }
 });
+
+// // test tableau
+// const testTab = [`${priority}`, `${deadline}`, `${statut}`, `${taskOrList}`];
+// // je crée une variable de save de ma liste de taches/listes
+
+// let html = "";
+
+// // =====================> LISTER LES LISTES ET TACHES
+
+// // Etape 1: je crée ma list de liste et taches
+// for(let i = 0; i < testTab.length; i++)
+// {
+//   html += cardCreator(testTab[i]);
+//   console.log(i);
+// }

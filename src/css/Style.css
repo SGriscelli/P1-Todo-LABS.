@@ -147,7 +147,7 @@ a {
     height: auto;
     margin: 5px;
     border: 1px solid var(--primary-color);
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 .contactUsArea {
@@ -160,6 +160,7 @@ a {
     border-radius: 8.5px;
     background-color: var(--third-color);
     font-size: 100%;
+}
 
 #sort {
     height: 3rem;
@@ -270,4 +271,3 @@ footer {
     margin-top: auto;
     padding: 10px 0; 
 }
-
