@@ -143,13 +143,11 @@ a {
     color: var(--primary-text-color);
 }
 
-#taskArea, #listArea {
-    height: auto;
-    margin: 5px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;;
+#taskArea li {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
 }
-
 .contactUsArea {
     height: 5rem;
     margin: 5px;
@@ -160,7 +158,7 @@ a {
     border-radius: 8.5px;
     background-color: var(--third-color);
     font-size: 100%;
-
+}
 #sort {
     height: 3rem;
     width: 5rem;
@@ -270,4 +268,22 @@ footer {
     margin-top: auto;
     padding: 10px 0; 
 }
+@media screen {
+    
+}
+@media only screen and (min-width: 769px) {
+     #cardContainer {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+         gap: 3px;
+         margin: 0% 10% 0% 10%;
 
+}
+    #taskArea, #listArea {
+         height: auto;
+         margin: 5px;
+         border: 1px solid var(--primary-color);
+         border-radius: 5px;;
+          margin: 0% 32% 0% 32%;
+} 
+}

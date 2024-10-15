@@ -2,7 +2,7 @@
 // ================ ECOUTE DU FORMULAIRE:
 let taskData= [];
 // Etape 1: Je déclare les fonctions des élements que je veux écouter:
-const addTask = {function(event) {
+const addTask = function(event) {
     event.preventDefault();
 
         let newTask= {
