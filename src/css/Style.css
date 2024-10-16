@@ -1,6 +1,6 @@
 :root {
-	--primary-color: #a6c9f8;;
-	--secondary-color: #c7ddf;
+	--primary-color: #1992EA;
+	--secondary-color: #a6c9f8;
 	--third-color: #e3e1df;
 	--primary-text-color: #fefefe;
 	--secondary-text-color: black;
@@ -8,12 +8,12 @@
 
 @font-face {
 	font-family: "Exo2";
-	src: url("../acceuil/public/fonts/Exo2-VariableFont_wght.ttf");
+	src: url(".https://fonts.google.com/specimen/Exo+2");
 }
 
 @font-face {
 	font-family: "Assistant";
-	src: url("../acceuil/public/fonts/Assistant-VariableFont_wght.ttf");
+	src: url("https://fonts.google.com/specimen/Assistant");
 }
 
 h1,
@@ -26,7 +26,6 @@ nav {
 main,
 #contactUsButton {
 	font-family: "Assistant";
-
 }
 
 html,
@@ -45,21 +44,19 @@ header {
 	background-color: var(--primary-color);
 }
 
-
 .addTask {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
 }
 
 .addTask .addList {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .textTask {
-    width: 5rem;
-
+	width: 5rem;
 }
 
 .sort {
@@ -89,32 +86,31 @@ header .topHeader .button {
 	border-radius: 15px;
 	font-size: 150%;
 }
+
 * {
 	margin: 0;
 	padding: 0;
 }
-.{
-	border-radius: 15px;
-	background-color: var(--third-color);
-}
-header, footer {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.493)
+
+header,
+footer {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.493);
 }
 
-/* .mainInfo {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.466); 
-} */
 body {
-    background: linear-gradient(to right, var(--primary-color) ,var(--secondary-color) ); 
+	background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
-header, footer {
-    padding: 15px;
+
+header,
+footer {
+	padding: 15px;
 }
 
 .mainInfo {
-    padding: 10px; 
+	padding: 10px;
 	border-radius: 15px;
 }
+
 h1 {
 	color: var(--primary-text-color);
 	font-size: x-large;
@@ -133,9 +129,8 @@ h2 {
 	height: 2rem;
 	width: 2rem;
 	border-radius: 30px;
-	background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );;
+	background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
 }
-
 
 .indicatorBar {
 	display: flex;
@@ -169,6 +164,7 @@ h2 {
 	line-height: 1.8em;
 	border: 2px solid green;
 }
+
 .circle1 {
 	display: inline-block;
 	width: 1.9em;
@@ -180,6 +176,7 @@ h2 {
 	line-height: 1.8em;
 	border: 2px solid orange;
 }
+
 .circle2 {
 	display: inline-block;
 	width: 1.9em;
@@ -192,12 +189,8 @@ h2 {
 	border: 2px solid black;
 }
 
-.green {
-	font-size: 0.7em;
-}
-.orange {
-	font-size: 0.7em;
-}
+.green,
+.orange,
 .black {
 	font-size: 0.7em;
 }
@@ -219,6 +212,7 @@ a {
 	margin: 5px;
 	border: 1px solid var(--primary-color);
 }
+
 .contactUsArea {
 	height: 5rem;
 	margin: 5px;
@@ -226,19 +220,12 @@ a {
 	display: none;
 }
 
-#contactUsButton{
-    border-radius: 8.5px;
-    background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
-    font-size: 100%;
+#contactUsButton {
+	border-radius: 8.5px;
+	background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+	font-size: 100%;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 338299792f37ec16683d65128addb383870c8c9a
-=======
-}
->>>>>>> 8f6dcb12438f9b9651796db2919b8c0b3819f4fc
 #sort {
 	height: 3rem;
 	width: 5rem;
@@ -254,7 +241,7 @@ a {
 	height: auto;
 	padding-left: 3rem;
 	padding-right: 3rem;
-	background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
+	background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
 	border-radius: 0.4rem;
 	display: flex;
 	flex-direction: column;
@@ -263,55 +250,55 @@ a {
 }
 
 #listArea .switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-  }
-  
-  #listArea .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  #listArea .sliderRound {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f30606;
-    transition: 0.4s;
-    border-radius: 24px;
-  }
-  
-  #listArea .sliderRound:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-  
-  #listArea input:checked + .sliderRound {
-    background-color: #4CAF50;
-  }
-  
-  #listArea input:checked + .sliderRound:before {
-    transform: translateX(26px);
-  }
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+}
 
+#listArea .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+#listArea .sliderRound {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #f30606;
+	transition: 0.4s;
+	border-radius: 24px;
+}
+
+#listArea .sliderRound:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+#listArea input:checked + .sliderRound {
+	background-color: #4CAF50;
+}
+
+#listArea input:checked + .sliderRound:before {
+	transform: translateX(26px);
+}
 
 .informationsTask {
 	display: flex;
 	gap: 1rem;
 }
+
 .informationsTask a {
 	color: black;
 }
@@ -321,25 +308,23 @@ a {
 	gap: 1rem;
 }
 
-
 .cardContainer {
-    height: auto;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    background-color: #e6eefa ;
-    border-radius: 0.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2px;
+	height: auto;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	background-color: #e6eefa;
+	border-radius: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2px;
 }
 
 .mainInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
 
 footer {
 	background-color: var(--primary-color);
@@ -352,68 +337,69 @@ footer {
 	margin-top: auto;
 	padding: 10px 0;
 }
-<<<<<<< HEAD
-=======
 
-#textInput,#deadlineInput,#priorityInput,#statutInput,#taskOrListInput,#submit {
+#textInput,
+#deadlineInput,
+#priorityInput,
+#statutInput,
+#taskOrListInput,
+#submit {
 	border-radius: 15px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.466);
 	font-size: 70%;
 	font-family: "Exo2";
 }
+
 #submit {
-    width: 20%;}
-#textInput{
+	width: 20%;
+}
+
+#textInput {
 	width: 80%;
-    height: 2em;
-    margin: .2em;
-	
-	
+	height: 2em;
+	margin: 0.2em;
 }
+
 #taskForm {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 0.5rem;
 }
+
 .sort {
-    margin: .2em; }
-       
+	margin: 0.2em;
+}
+
 @media only screen and (min-width: 766px) {
 	.indicatorBar {
 		display: flex;
-		width: +95%;
+		width: 95%;
 		gap: 6px;
 	}
 }
-    
+
 @media only screen and (min-width: 769px) {
-    body{
-        margin: 0% 7% 0% 7%;
-		font-size: 120% 
-    }
-     #cardContainer {
-         display: grid;
-         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
-         gap: 2px;
-         background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
-         font-family: "Exo2";
-         font-size:larger;
+	body {
+		margin: 0% 7%;
+		font-size: 120%;
+	}
 
-}
+	#cardContainer {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		gap: 2px;
+		background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+		font-family: "Exo2";
+		font-size: larger;
+	}
 
+	#taskArea,
+	#listArea {
+		height: auto;
+		margin: 5px;
+		border-radius: 5px;
+		margin: 0% 1%;
+	}
 }
- #taskArea, #listArea {
-         height: auto;
-         margin: 5px;
-         border-radius: 5px;;
-        margin: 0% 1% 0% 1%;
-
-} 
-<<<<<<< HEAD
-=======
- 
-}
->>>>>>> 8f6dcb12438f9b9651796db2919b8c0b3819f4fc
->>>>>>> c28980dc9274838bef6f0861dd335334eb79733f
