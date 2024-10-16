@@ -8,12 +8,12 @@
 
 @font-face {
 	font-family: "Exo2";
-	src: url(".https://fonts.google.com/specimen/Exo+2");
+	src: url("../acceuil/public/fonts/Exo2-VariableFont_wght.ttf");
 }
 
 @font-face {
 	font-family: "Assistant";
-	src: url("https://fonts.google.com/specimen/Assistant");
+	src: url("https://fonts.google.com/specimen/Exo+2");
 }
 
 h1,
