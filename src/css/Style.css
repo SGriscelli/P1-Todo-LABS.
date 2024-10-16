@@ -230,8 +230,15 @@ a {
     border-radius: 8.5px;
     background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
     font-size: 100%;
-
 }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 338299792f37ec16683d65128addb383870c8c9a
+=======
+}
+>>>>>>> 8f6dcb12438f9b9651796db2919b8c0b3819f4fc
 #sort {
 	height: 3rem;
 	width: 5rem;
@@ -345,6 +352,8 @@ footer {
 	margin-top: auto;
 	padding: 10px 0;
 }
+<<<<<<< HEAD
+=======
 
 #textInput,#deadlineInput,#priorityInput,#statutInput,#taskOrListInput,#submit {
 	border-radius: 15px;
@@ -402,3 +411,9 @@ footer {
         margin: 0% 1% 0% 1%;
 
 } 
+<<<<<<< HEAD
+=======
+ 
+}
+>>>>>>> 8f6dcb12438f9b9651796db2919b8c0b3819f4fc
+>>>>>>> c28980dc9274838bef6f0861dd335334eb79733f
