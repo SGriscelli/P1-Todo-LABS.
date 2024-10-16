@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>To-Do LABS - Improve your work & your life </title>
     <link rel="stylesheet" href="../css/style.css">
     
@@ -28,19 +27,18 @@
         </section>
         
     </header>
-
+    <div> <br> </div>
     <main>
-        <section class="indicatorBar">
-            <figure class="indicator">Réalisées: <span id="totalKPI"></span>
-            </figure> 
-            <figure class="indicator">En-cours:
-            </figure>
-            <figure class="indicator">A faire:
-            </figure>
+        <section class="indicatorBar"> 
+            <figure class="indicator">Réalisées: <span class="circle" id="totalKPI"><span class="green"><strong></strong></span></span></figure> 
+            <figure class="indicator">En-cours: <span class="circle1"><span class="orange"><strong>15/ 50</strong></span></span></figure>
+            <figure class="indicator">À faire: <span class="circle2"><span class="black"><strong>25/ 50</strong></span></span></figure>
+        
         </section>
+        <div> <br> </div>
         
         <form id="taskForm">
-            <input type="text" id="textInput" placeholder="votre nouvelle tâche">
+            <input type="text" id="textInput" placeholder= "Votre nouvelle tâche">
             <div class="mainInfo">
             <input type="date" id="deadlineInput">
             <select id="priorityInput">
@@ -76,13 +74,17 @@
                 <option value="todo">Faible</option>
             </select>
         </div>
-
+<section class="tt&l">
         <ul id="taskArea">
-            Mes tâches:
+           
            <div id="cardContainer">
            </div>
         </ul>        
+        <ul id="listArea">
+            
 
+        </ul>  
+        </section>      
         <section class="contactUsArea">
                 <h2>Contact Us</h2>
                 <form>
@@ -98,6 +100,6 @@
         <div class="TDLfooter"><strong> <a href="https://www.wildcodeschool.com/fr-fr/" target="_blank">TO-DO-LABS <br> <center>WCS 2024</center></strong></a> </div>
         <button id="contactUsButton";> Contact us </button>
     </footer>
-    <script src="../acceuil/script3.js"></script>
+    <script src="../acceuil/script.js"></script>
 </body>
 </html>
