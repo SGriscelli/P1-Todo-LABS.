@@ -2,8 +2,10 @@
 
 // Etape 1: Je déclare les fonctions des éléments que je veux écouter:
 
+
 let form = document.getElementById(`taskForm`);
 let textInput = document.getElementById(`textInput`);
+
 let deadlineInput = document.getElementById(`deadlineInput`);
 let priorityInput = document.getElementById(`priorityInput`);
 let statutInput = document.getElementById(`statutInput`);
@@ -17,8 +19,9 @@ function updateTaskCount() {
 
 // Etape 2: J'écoute les éléments:
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
+form.addEventListener("submit", function (event) {
+	event.preventDefault();
+
 
   // Récupération des valeurs du formulaire:
   const name = textInput.value;
@@ -42,6 +45,7 @@ form.addEventListener('submit', function(event) {
   taskElement.classList.add('task');
 
   taskElement.innerHTML = `
+
     <div class="cardContainer">
       <h3>${name}</h3>
       <div>
@@ -65,6 +69,7 @@ form.addEventListener('submit', function(event) {
   checkButton.innerHTML = 'Valider';
   modificateButton.innerHTML = 'Modifier';
   deleteButton.innerHTML = 'Supprimer';
+
 
   // Ajout des boutons à l'élément de tâche
   taskElement.appendChild(checkButton);
@@ -104,6 +109,7 @@ form.addEventListener('submit', function(event) {
     });
 
     updateTaskCount();
+
 });
 
 // =======================> AFFICHER / CACHER LA SECTION CONTACT US
