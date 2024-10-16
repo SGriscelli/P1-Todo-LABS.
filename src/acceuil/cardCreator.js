@@ -1,18 +1,28 @@
 
 // ================ ECOUTE DU FORMULAIRE:
-
+let taskData= [];
 // Etape 1: Je déclare les fonctions des élements que je veux écouter:
+const addTask = function(event) {
+    event.preventDefault();
 
-let form = document.getElementById('taskForm');
-let textInput = document.getElementById('textInput');
-let deadlineInput = document.getElementById(`deadlineInput`);
-let priorityInput = document.getElementById(`priorityInput`);
-let statutInput = document.getElementById(`statutInput`);
-let taskListInput = document.getElementById(`taskOrListInput`);
-let taskContainer = document.getElementById(`cardContainer`);
-let taskData = [];
+        let newTask= {
+        id : Date.now(),
+        textInput : document.getElementById('textInput').value,
+        deadlineInput : document.getElementById(`deadlineInput`).value,
+        priorityInput : document.getElementById(`priorityInput`).value,
+        statutInput : document.getElementById(`statutInput`).value,
+        taskListInput : document.getElementById(`taskOrListInput`).value,
+        taskContainer : document.getElementById(`cardContainer`).value,
+        }
+        taskData.push(newTask);
+        document.querySelector('form').reset();
 
-// Etape 2: J'écoute les élements:
+    }
+    form.addEventListener('submit', function(event) {
+
+    
+});
+
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -26,16 +36,17 @@ form.addEventListener('submit', function(event) {
 
   // je crée mon element à insérer lorsque je crée une tâche:
     const taskElement = document.createElement('div');
+    taskData.push(text);
     taskElement.classList.add('task');
     taskElement.innerHTML = `
     <div class="cardContainer">
       <h3>${name}</h3>
     <div>
-      <p>Catégorie: ${priority}</p>
-      <p>Deadline: ${deadline}</p>
+      <p>Catégorie = ${priority}</p>
+      <p>Deadline = ${deadline}</p>
     </div>
-      <p>Statut: ${statut}</p>
-      <p>Catégorie: ${taskOrList}</p>
+      <p>Statut = ${statut}</p>
+      <p>Catégorie = ${taskOrList}</p>
     </div>
     `;
 
@@ -46,6 +57,13 @@ form.addEventListener('submit', function(event) {
   form.reset();
 
 });
+
+// // =======================> CREATION DE LA FUNCTION : CREATION D'OBJETS AVEC PLUSIEURS VARIABLES
+
+// // Etape 1: Définir son besoin: je veux que pour chaque nouvelle entrée de tache, un object se crée:
+
+
+
 
 // =======================> AFFICHER / CACHER LA SECTION CONTACT US
 

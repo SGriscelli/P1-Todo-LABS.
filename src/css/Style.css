@@ -49,9 +49,24 @@ header {
 	background-color: var(--primary-color);
 }
 
+.addTask {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 .addTask .addList {
+<<<<<<< HEAD
 	display: flex;
 	justify-content: space-around;
+=======
+    display: flex;
+    justify-content: center;
+}
+
+.textTask {
+    width: 5rem;
+>>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
 }
 
 .sort {
@@ -99,6 +114,7 @@ h2 {
 	border-radius: 30px;
 	color: var(--secondary-color);
 }
+
 
 .indicatorBar {
 	display: flex;
@@ -176,25 +192,37 @@ a {
 	color: var(--primary-text-color);
 }
 
+<<<<<<< HEAD
 #taskArea,
 #listArea {
 	height: auto;
 	margin: 5px;
 	border: 1px solid var(--primary-color);
+=======
+#taskArea li {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+>>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
 }
-
 .contactUsArea {
 	height: 5rem;
 	margin: 5px;
 	border: 1px solid var(--primary-color);
 	display: none;
 }
+<<<<<<< HEAD
 #contactUsButton {
 	border-radius: 8.5px;
 	background-color: var(--third-color);
 	font-size: 100%;
+=======
+#contactUsButton{
+    border-radius: 8.5px;
+    background-color: var(--third-color);
+    font-size: 100%;
+>>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
 }
-
 #sort {
 	height: 3rem;
 	width: 5rem;
@@ -217,6 +245,53 @@ a {
 	align-items: center;
 	margin: 2px;
 }
+<<<<<<< HEAD
+=======
+#listArea .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  #listArea .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #listArea .sliderRound {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f30606;
+    transition: 0.4s;
+    border-radius: 24px;
+  }
+  
+  #listArea .sliderRound:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  #listArea input:checked + .sliderRound {
+    background-color: #4CAF50;
+  }
+  
+  #listArea input:checked + .sliderRound:before {
+    transform: translateX(26px);
+  }
+>>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
 
 .informationsTask {
 	display: flex;
@@ -231,10 +306,31 @@ a {
 	gap: 1rem;
 }
 
+<<<<<<< HEAD
 main {
 	flex-grow: 1;
 }
 
+=======
+.cardContainer {
+    height: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #e6eefa ;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+}
+
+.mainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+>>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
 footer {
 	background-color: var(--primary-color);
 	display: flex;
@@ -250,4 +346,27 @@ footer {
 	.indicatorBar {
 		display: flex;
 	}
+}
+@media screen {
+    
+}
+@media only screen and (min-width: 769px) {
+    body{
+        margin: 0% 7% 0% 7%;
+    }
+     #cardContainer {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+         gap: 2px;
+         margin: 0% 5% 0% 5%;
+         font-family: "Exo2";
+         font-size:larger;
+
+}
+    #taskArea, #listArea {
+         height: auto;
+         margin: 5px;
+         border-radius: 5px;;
+        margin: 0% 1% 0% 1%;
+} 
 }
