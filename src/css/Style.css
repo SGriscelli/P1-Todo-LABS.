@@ -1,8 +1,8 @@
 :root {
-	--primary-color: #a6c9f8;
-	--secondary-color: #c7ddfa;
-	--third-color: #ebf3fd;
-	--primary-text-color: whitesmoke;
+	--primary-color: #a6c9f8;;
+	--secondary-color: #c7ddf;
+	--third-color: #e3e1df;
+	--primary-text-color: #fefefe;
 	--secondary-text-color: black;
 }
 
@@ -26,6 +26,7 @@ nav {
 main,
 #contactUsButton {
 	font-family: "Assistant";
+
 }
 
 html,
@@ -100,9 +101,9 @@ header, footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.493)
 }
 
-.mainInfo {
+/* .mainInfo {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.466); 
-}
+} */
 body {
     background: linear-gradient(to right, var(--primary-color) ,var(--secondary-color) ); 
 }
@@ -132,7 +133,7 @@ h2 {
 	height: 2rem;
 	width: 2rem;
 	border-radius: 30px;
-	color: var(--secondary-color);
+	background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );;
 }
 
 
@@ -227,7 +228,7 @@ a {
 
 #contactUsButton{
     border-radius: 8.5px;
-    background-color: var(--third-color);
+    background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
     font-size: 100%;
 
 }
@@ -246,7 +247,7 @@ a {
 	height: auto;
 	padding-left: 3rem;
 	padding-right: 3rem;
-	background-color: #e6eefa;
+	background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
 	border-radius: 0.4rem;
 	display: flex;
 	flex-direction: column;
@@ -351,30 +352,53 @@ footer {
 	font-size: 70%;
 	font-family: "Exo2";
 }
+#submit {
+    width: 20%;}
+#textInput{
+	width: 80%;
+    height: 2em;
+    margin: .2em;
+	
+	
+}
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sort {
+    margin: .2em; }
+       
 @media only screen and (min-width: 766px) {
 	.indicatorBar {
 		display: flex;
+		width: +95%;
+		gap: 6px;
 	}
 }
     
 @media only screen and (min-width: 769px) {
     body{
         margin: 0% 7% 0% 7%;
+		font-size: 120% 
     }
      #cardContainer {
          display: grid;
-         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
          gap: 2px;
-         margin: 0% 5% 0% 5%;
+         background: linear-gradient(to right, var(--secondary-color) ,var(--primary-color) );
          font-family: "Exo2";
          font-size:larger;
 
 }
-    #taskArea, #listArea {
+
+}
+ #taskArea, #listArea {
          height: auto;
          margin: 5px;
          border-radius: 5px;;
         margin: 0% 1% 0% 1%;
+
 } 
- 
-}
