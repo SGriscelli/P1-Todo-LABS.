@@ -1,10 +1,9 @@
-
 // ================ ECOUTE DU FORMULAIRE:
 
 // Etape 1: Je déclare les fonctions des élements que je veux écouter:
 
-let form = document.getElementById('taskForm');
-let textInput = document.getElementById('textInput');
+let form = document.getElementById("taskForm");
+let textInput = document.getElementById("textInput");
 let deadlineInput = document.getElementById(`deadlineInput`);
 let priorityInput = document.getElementById(`priorityInput`);
 let statutInput = document.getElementById(`statutInput`);
@@ -14,20 +13,20 @@ let taskData = [];
 
 // Etape 2: J'écoute les élements:
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
+form.addEventListener("submit", function (event) {
+	event.preventDefault();
 
-  // je récupérer les valeurs des champes du formulaire:
-    const name =  textInput.value;
-    const deadline = deadlineInput.value;
-    const priority = priorityInput.value;
-    const statut = statutInput.value;
-    const taskOrList = taskListInput.value;
+	// je récupérer les valeurs des champes du formulaire:
+	const name = textInput.value;
+	const deadline = deadlineInput.value;
+	const priority = priorityInput.value;
+	const statut = statutInput.value;
+	const taskOrList = taskListInput.value;
 
-  // je crée mon element à insérer lorsque je crée une tâche:
-    const taskElement = document.createElement('div');
-    taskElement.classList.add('task');
-    taskElement.innerHTML = `
+	// je crée mon element à insérer lorsque je crée une tâche:
+	const taskElement = document.createElement("div");
+	taskElement.classList.add("task");
+	taskElement.innerHTML = `
     <div class="cardContainer">
       <h3>${name}</h3>
     <div>
@@ -39,12 +38,11 @@ form.addEventListener('submit', function(event) {
     </div>
     `;
 
-    // j'insère mon élément dans le conteneur:
-  taskContainer.appendChild(taskElement);
+	// j'insère mon élément dans le conteneur:
+	taskContainer.appendChild(taskElement);
 
-    // je reset le formulaire:
-  form.reset();
-
+	// je reset le formulaire:
+	form.reset();
 });
 
 // =======================> AFFICHER / CACHER LA SECTION CONTACT US
@@ -53,13 +51,13 @@ form.addEventListener('submit', function(event) {
 const contactUsButton = document.querySelector(`#contactUsButton`);
 const contactUsArea = document.querySelector(`.contactUsArea`);
 
-contactUsButton.addEventListener('click', (event) => {
- event.preventDefault();
- event.stopPropagation();
+contactUsButton.addEventListener("click", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
 
- if (contactUsArea.style.display === "block") {
-   contactUsArea.style.display = "none";
- } else  {
-   contactUsArea.style.display = "block";
- }
+	if (contactUsArea.style.display === "block") {
+		contactUsArea.style.display = "none";
+	} else {
+		contactUsArea.style.display = "block";
+	}
 });
