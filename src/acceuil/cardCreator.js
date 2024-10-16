@@ -1,5 +1,15 @@
 
 // ================ ECOUTE DU FORMULAIRE:
+const monDiv = document.createElement('div');
+monDiv.innerHTML = `
+    <div id="listArea">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="sliderRound"></span>
+        </label>
+    </div>
+`;
+
 let taskData= [];
 // Etape 1: Je déclare les fonctions des élements que je veux écouter:
 const addTask = function(event) {
