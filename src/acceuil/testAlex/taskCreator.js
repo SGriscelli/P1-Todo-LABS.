@@ -1,4 +1,3 @@
-
 // ================ ECOUTE DU FORMULAIRE:
 
 // Etape 1: Je déclare les fonctions des élements que je veux écouter:
@@ -23,7 +22,29 @@ form.addEventListener('submit', function(event) {
     const statut = statutInput.value;
     const taskOrList = taskListInput.value;
 
+  // Je crée les variables videsde stockage de mes tâches:
+    let allData = [];
+    let taskData = {
+        title: textInput.value,
+        deadline: deadlineInput.value,
+        priority: priorityInput.value,
+        statut: statutInput.value,
+        taskOrList: taskListInput.value,
+    };
+
+    // Je crée une variable de sauvegarde de mes données:
+    let html = "";
+
+    for (let i=0; i <allData.length; i++) {
+        html += allData.push(taskData);
+    }
+
+    console.log(taskData);
+    console.log(allData);
+    console.log(allData.length);
+
   // je crée mon element à insérer lorsque je crée une tâche:
+
     const taskElement = document.createElement('div');
     taskElement.classList.add('task');
     taskElement.innerHTML = `
@@ -36,20 +57,17 @@ form.addEventListener('submit', function(event) {
       <p>Statut: ${statut}</p>
       <p>Catégorie: ${taskOrList}</p>
     </div>
-    <div class="action button">
-      <button class="modificationButton">Modifier</button>
-      <button class="deleteButton">Supprimer</button>
-      <button class="doneButton">Fait</button>
-    </div>
     `;
-
+        
     // j'insère mon élément dans le conteneur:
   taskContainer.appendChild(taskElement);
 
     // je reset le formulaire:
   form.reset();
 
+  
 });
+
 
 // =======================> AFFICHER / CACHER LA SECTION CONTACT US
 
