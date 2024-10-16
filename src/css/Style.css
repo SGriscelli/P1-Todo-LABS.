@@ -56,17 +56,13 @@ header {
 }
 
 .addTask .addList {
-<<<<<<< HEAD
-	display: flex;
-	justify-content: space-around;
-=======
     display: flex;
     justify-content: center;
 }
 
 .textTask {
     width: 5rem;
->>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
+
 }
 
 .sort {
@@ -192,18 +188,11 @@ a {
 	color: var(--primary-text-color);
 }
 
-<<<<<<< HEAD
 #taskArea,
 #listArea {
 	height: auto;
 	margin: 5px;
 	border: 1px solid var(--primary-color);
-=======
-#taskArea li {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
->>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
 }
 .contactUsArea {
 	height: 5rem;
@@ -211,17 +200,12 @@ a {
 	border: 1px solid var(--primary-color);
 	display: none;
 }
-<<<<<<< HEAD
-#contactUsButton {
-	border-radius: 8.5px;
-	background-color: var(--third-color);
-	font-size: 100%;
-=======
+
 #contactUsButton{
     border-radius: 8.5px;
     background-color: var(--third-color);
     font-size: 100%;
->>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
+
 }
 #sort {
 	height: 3rem;
@@ -245,8 +229,7 @@ a {
 	align-items: center;
 	margin: 2px;
 }
-<<<<<<< HEAD
-=======
+
 #listArea .switch {
     position: relative;
     display: inline-block;
@@ -291,7 +274,7 @@ a {
   #listArea input:checked + .sliderRound:before {
     transform: translateX(26px);
   }
->>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
+
 
 .informationsTask {
 	display: flex;
@@ -306,12 +289,7 @@ a {
 	gap: 1rem;
 }
 
-<<<<<<< HEAD
-main {
-	flex-grow: 1;
-}
 
-=======
 .cardContainer {
     height: auto;
     padding-left: 3rem;
@@ -330,7 +308,7 @@ main {
     align-items: center;
 }
 
->>>>>>> a7f731bd67db78b34016d8f826410ddf87fcf0b5
+
 footer {
 	background-color: var(--primary-color);
 	display: flex;
@@ -347,9 +325,7 @@ footer {
 		display: flex;
 	}
 }
-@media screen {
     
-}
 @media only screen and (min-width: 769px) {
     body{
         margin: 0% 7% 0% 7%;
