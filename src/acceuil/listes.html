@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do LABS - Improve your work & your life </title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+<body>
+    <header>
+
+        <section class="topHeader">
+            <h1><strong>TO-DO-LABS</strong></h1>
+        </section>
+
+        <section class="navHeader">
+            <nav>
+                <ul>
+                    <a href="./listes.html"><strong>My Lists</strong> </a>
+                    <a href="./Index.html"><strong>My Tasks</strong> </a>
+                    <a href="#"><strong>My Account</strong></a>
+                </ul>
+            </nav>
+        </section>
+        
+    </header>
+    <div> <br> </div>
+    <main>
+
+        
+        <form id="taskForm">
+            <input type="text" id="textInput" placeholder= "   Votre nouvelle liste">
+            <div class="mainInfo">
+            <input type="date" id="deadlineInput">
+            <select id="priorityInput">
+                <option value="aucune">Aucune</option>
+                <option value="faible">Faible</option>
+                <option value="haute">Haute</option>
+            </select>
+            <select id="statutInput">
+                <option value="à faire">A faire</option>
+                <option value="en-cours">En-cours</option>
+                <option value="fait">Fait</option>
+            </select>
+            <select id="taskOrListInput">
+                <option value="tache">Tâche</option>
+                <option value="list">Liste</option>
+            </select>
+            </div>
+            <button type="submit" id="submitTask"> Ajouter</button>
+        </form>
+
+
+<section class="tt&l">
+  
+        <ul id="listArea">
+            
+
+        </ul>  
+        </section>      
+        <section class="contactUsArea">
+                <h2>Contact Us</h2>
+                <form action="mailto:LABS@hotmail.fr" method="post" enctype="text/plain">
+                    <input  type="text" name="text" placeholder="texte à saisir">
+                    <input type="email" name="Email" placeholder="@">
+                    <input type="submit"  value="Submit">
+                </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="menufooter"> <a href=#><strong> Menu </strong></a> </div> 
+        <div class="TDLfooter"><strong> <a href="https://www.wildcodeschool.com/fr-fr/" target="_blank">TO-DO-LABS <br> <center>WCS 2024</center></strong></a> </div>
+        <button id="contactUsButton";> <strong> Contact us </strong></button>
+    </footer>
+    <script src="../acceuil/script2.js"></script>
+</body>
+</html>

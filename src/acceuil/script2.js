@@ -15,22 +15,31 @@ let allData = []; // Tableau pour stocker les tâches
 let pendingData = []; // Tableau pour stocker les en-cours
 let todoData = []; // Tableau pour stocker les taches A faire
 
-// Fonction pour mettre à jour le compteur de tâches total:
+// Fonction pour mettre à jour le compteur de tâches total
 function updateTaskCount() {
   totalKPI.textContent = allData.length; // Mise à jour du nombre de tâches
 }
 
-// Fonction pour mettre à jour le compteur de tâches total:
-  function updatePendingCountIncludes(allData) {
-    return pendingData = allData.filter(task => task.statut === 'en-cours');
-    pendingKPI.textContent = pendingData.length;
+// Fonction pour mettre à jour le compteur de tâches en-cours (statut "en-cours")
+function updatePendingCountIncludes() {
+  // Filtrer les tâches qui ont un statut "en-cours"
+  pendingData = allData.filter(task => task.statut.toLowerCase() === 'en-cours');
+  // Mettre à jour l'élément HTML avec le nombre de tâches "en-cours"
+  pendingKPI.textContent = pendingData.length;
 }
 
-// Fonction pour mettre à jour le compteur de tâches total:
+// Fonction pour mettre à jour le compteur de tâches à faire (statut "A faire")
 function updateTodoCount() {
-  todoKPI.textContent = allData.length; // Mise à jour du nombre de tâches
+  todoData = allData.filter(task => task.statut.toLowerCase() === 'a faire');
+  todoKPI.textContent = todoData.length;
 }
 
+// Mettre à jour tous les compteurs (total, en-cours, à faire)
+function updateAllCounters() {
+  updateTaskCount(); // Mise à jour du compteur total
+  updatePendingCountIncludes(); // Mise à jour du compteur "en-cours"
+  updateTodoCount(); // Mise à jour du compteur "A faire"
+}
 
 // Etape 2: Ecouter l'événement de soumission du formulaire
 form.addEventListener('submit', function(event) {
@@ -58,7 +67,7 @@ form.addEventListener('submit', function(event) {
   const taskElement = document.createElement('div');
   taskElement.classList.add('task');
 
-  // HTML de la tâche affichée (avant modification)
+  // HTML de la tâche affichée
   taskElement.innerHTML = `
     <div class="cardContainer">
       <h3 class="task-name">${name}</h3>
@@ -98,7 +107,9 @@ form.addEventListener('submit', function(event) {
 
   // Réinitialisation du formulaire
   textInput.value = '';
-  updateTaskCount(); // Mise à jour du nombre total de tâches
+  
+  // Mise à jour des compteurs après l'ajout de la tâche
+  updateAllCounters();
 
   // Événement pour changer le statut de la tâche à "fait"
   checkButton.addEventListener('click', function() {
@@ -110,6 +121,9 @@ form.addEventListener('submit', function(event) {
     if (taskIndex !== -1) {
       allData[taskIndex] = newTaskForm; // Mettre à jour l'objet dans allData
     }
+
+    // Mise à jour des compteurs après modification du statut
+    updateAllCounters();
   });
 
   // Événement pour supprimer la tâche
@@ -122,8 +136,8 @@ form.addEventListener('submit', function(event) {
       allData.splice(taskIndex, 1); // Retirer l'objet du tableau
     }
 
-    updateTaskCount(); // Mettre à jour le nombre total de tâches
-    updatePendingCountIncludes(allData);
+    // Mettre à jour les compteurs après la suppression
+    updateAllCounters();
   });
 
   // Événement pour passer en mode édition (modification)
@@ -178,10 +192,72 @@ form.addEventListener('submit', function(event) {
     taskElement.querySelector('.task-deadline').textContent = `Deadline: ${editedDeadline}`;
     taskElement.querySelector('.task-status').textContent = `Statut: ${editedStatut}`;
 
-    // Masquer le bouton Enregistrer après modification
+    // Masquer le bouton "Enregistrer"
     saveButton.style.display = 'none';
+
+    // Mise à jour des compteurs après modification
+    updateAllCounters();
   });
 });
+
+// Écouter les changements de tri dans le select
+const sortSelect = document.querySelector('.sort'); // Sélectionner l'élément <select>
+
+sortSelect.addEventListener('change', function(event) {
+  const selectedCategory = event.target.value;
+  filterTasks(selectedCategory); // Appeler la fonction pour filtrer selon la catégorie choisie
+});
+
+// Fonction pour filtrer les tâches en fonction de la catégorie
+function filterTasks(category) {
+  // Vider le conteneur des tâches avant d'afficher les tâches filtrées
+  taskContainer.innerHTML = '';
+
+  // Définir le filtre en fonction de la catégorie choisie
+  let filteredTasks = [];
+
+  if (category === 'all') {
+    filteredTasks = allData; // Afficher toutes les tâches
+  } else if (category === 'done') {
+    filteredTasks = allData.filter(task => task.statut.toLowerCase() === 'fait');
+  } else if (category === 'todo') {
+    filteredTasks = allData.filter(task => task.statut.toLowerCase() === 'a faire');
+  } else if (category === 'prioritaire') {
+    filteredTasks = allData.filter(task => task.priority.toLowerCase() === 'haute');
+  } else if (category === 'important') {
+    filteredTasks = allData.filter(task => task.priority.toLowerCase() === 'moyenne');
+  } else if (category === 'faible') {
+    filteredTasks = allData.filter(task => task.priority.toLowerCase() === 'faible');
+  }
+
+  // Réafficher les tâches filtrées
+  filteredTasks.forEach(task => {
+    displayTask(task); // Fonction pour afficher une tâche
+  });
+}
+
+// Fonction pour afficher une tâche dans le DOM
+function displayTask(task) {
+  const taskElement = document.createElement('div');
+  taskElement.classList.add('task');
+
+  // HTML de la tâche affichée
+  taskElement.innerHTML = `
+    <div class="cardContainer">
+      <h3 class="task-name">${task.name}</h3>
+      <div>
+        <p class="task-priority">Catégorie: ${task.priority}</p>
+        <p class="task-deadline">Deadline: ${task.deadline}</p>
+      </div>
+      <p class="task-status">Statut: ${task.statut}</p> <!-- Classe pour le statut -->
+      <p>Type: ${task.taskOrList}</p>
+    </div>
+  `;
+
+  // Ajouter la tâche filtrée dans le conteneur
+  taskContainer.appendChild(taskElement);
+}
+
 
 // =======================> AFFICHER / CACHER LA SECTION CONTACT US
 
@@ -199,3 +275,4 @@ contactUsButton.addEventListener('click', (event) => {
     contactUsArea.style.display = 'block';
   }
 });
+

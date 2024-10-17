@@ -20,7 +20,7 @@
         <section class="navHeader">
             <nav>
                 <ul>
-                    <a href="#listArea"><strong>My Lists</strong> </a>
+                    <a href="./listes.html"><strong>My Lists</strong> </a>
                     <a href="#taskArea"><strong>My Tasks</strong> </a>
                     <a href="#"><strong>My Account</strong></a>
                 </ul>
@@ -31,9 +31,9 @@
     <div> <br> </div>
     <main>
         <section class="indicatorBar"> 
-            <figure class="indicator"> <strong>Réalisées:</strong> <span class="circle" id="totalKPI"><span class="green"><strong></strong></span></span></figure> 
+            <figure class="indicator"> <strong>Total:</strong> <span class="circle" id="totalKPI"><span class="green"><strong></strong></span></span></figure> 
             <figure class="indicator"><strong>En-cours: </strong><span class="circle1" id="totalPending"><span class="orange"><strong></strong></span></span></figure>
-            <figure class="indicator"><strong>À faire: </strong> <span class="circle2"id="totalTodo"><span class="black"><strong>25/ 50</strong></span></span></figure>
+            <figure class="indicator"><strong>À faire: </strong> <span class="circle2"id="totalTodo"><span class="black"><strong></strong></span></span></figure>
         
         </section>
         <div> <br> </div>
@@ -43,9 +43,9 @@
             <div class="mainInfo">
             <input type="date" id="deadlineInput">
             <select id="priorityInput">
-                <option value="aucune">Aucune</option>
-                <option value="faible">Faible</option>
-                <option value="haute">Haute</option>
+                <option value="aucune">Priorité: Aucune</option>
+                <option value="faible">Priorité: Faible</option>
+                <option value="haute">Priorité: Haute</option>
             </select>
             <select id="statutInput">
                 <option value="à faire">A faire</option>
@@ -53,8 +53,14 @@
                 <option value="fait">Fait</option>
             </select>
             <select id="taskOrListInput">
-                <option value="tache">Tâche</option>
-                <option value="list">Liste</option>
+                <option value="liste">Liste</option>
+                <option value="bricolage">Bricolage</option>
+                <option value="jardinage">Jardinage</option>
+                <option value="courses">Courses</option>
+                <option value="divers">Divers</option>
+                <option value="travail">Travail</option>
+
+
             </select>
             </div>
             <button type="submit" id="submitTask"> Ajouter</button>
@@ -62,17 +68,22 @@
 
         <div class="sort"><h2>Trier par:</h2>
             <select name="sort" class="sort">
-                <option value="all">tâches</option>
-                <option value="done">listes</option>
+                <option value="liste">Liste</option>
+                <option value="bricolage">Bricolage</option>
+                <option value="jardinage">Jardinage</option>
+                <option value="courses">Courses</option>
+                <option value="divers">Divers</option>
+                <option value="travail">Travail</option>
             </select>
             <h2>ou par:</h2>
             <select name="sort" class="sort">
-                <option value="all">All</option>
-                <option value="done">Done</option>
-                <option value="todo">To-do</option>
-                <option value="all">Prioritaire</option>
-                <option value="done">Important</option>
-                <option value="todo">Faible</option>
+                <option value="all">Toutes</option>
+                <option value="aucune">Priorité: Aucune</option>
+                <option value="faible">Priorité: Faible</option>
+                <option value="haute">Priorité: Haute</option>
+                <option value="à faire">A faire</option>
+                <option value="en-cours">En-cours</option>
+                <option value="fait">Fait</option>
             </select>
         </div>
 <section class="tt&l">
@@ -85,7 +96,15 @@
             
 
         </ul>  
-        </section>      
+</section>
+
+        <div class="listCreator">
+        <form id="listForm">
+            <input type="text" id="listInput" placeholder= "   Donner un nom à votre liste">
+            <button type="submit" id="submitList"> Créer une liste</button>
+        </form>
+        </div>
+
         <section class="contactUsArea">
                 <h2>Contact Us</h2>
                 <form action="mailto:LABS@hotmail.fr" method="post" enctype="text/plain">
